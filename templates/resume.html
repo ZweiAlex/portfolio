@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/website-template.css') }}">
+    <meta charset="UTF-8">
+    <title>Alex Hopper - Resume</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('resume') }}">Resume</a>
+        <div class="dropdown">
+            <button class="dropbtn">Projects
+                <i class="caret-down">&#9660</i>
+            </button>
+            <div class="dropdown-content">
+                <a href="{{ url_for('website') }}">Website</a>
+                <a href="#">Placeholder</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+        <a href="https://github.com/ZweiAlex">Github</a>
+        <div class="right">
+            <a href="{{ url_for('resume') }}">Contact Me</a>
+        </div>
+    </div>
+    <div class="footer">
+        <footer>
+            <p> Current time: {{ date_time }}</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/website-template.css') }}">
+    <meta charset="UTF-8">
+    <title>Website</title>
+</head>
+<body>
+  <div class="navbar">
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('resume') }}">Resume</a>
+      <div class="dropdown">
+          <button class="dropbtn">Projects
+              <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+              <a href="{{ url_for('website') }}">Website</a>
+              <a href="#">Placeholder</a>
+              <a href="#">Link 3</a>
+          </div>
+      </div>
+      <a href="https://github.com/ZweiAlex">Github</a>
+      <div class="right">
+        <a href="{{ url_for('resume') }}">Contact Me</a>
+      </div>
+  </div>
+  <div class="main">
+      <p>I originally started this website in my 'Building Secure Applications in Python' class at UMGC.
+      I wanted to expand on the things I have been learning and thought this would be something that was helpful
+      and would push me to learn more about HTML and CSS.</p>
+      <p>Currently, for this website, I don't have any hosting. I would like to start hosting this either locally
+      using dynamic dns or in the cloud using AWS.</p>
+      <p>I am currently running this app through python flask. This may change as I learn more, but this is how I
+      learned it from my class.</p>
+      <p>The resources I used for this project were: <a>w3schools.com</a> and <a>codeacademy.com</a>.
+      W3 schools is an amazing resource for learning HTML and CSS and I highly recommend it. I also used
+      stackoverflow for troubleshooting as I worked on getting things set up in Flask.</p>
+  </div>
+  <div class="footer">
+      <footer>
+          <p> Current time: {{ date_time }}</p>
+      </footer>
+  </div>
+</body>
+</html>
